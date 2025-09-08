@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+     />
+ </head>
+    <body style="background-image: url(https://images.unsplash.com/photo-1726828952313-385d63df2514?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDcyfHxQSU5LJTIwYmlyaHRkYXklMjBDQUtFfGVufDB8fDB8fHww);" 
+    class="flex justify-center h-screen items-center">
+     <div 
+        class="bg-white border px-12 py-6 border-4 border-pink-300 shadow-lg shadow-pink-300 rounded-xl text-center animate__animated animate__backInDown margin m-8 w-110" id="kartu"
+     
+     >
+        <h1 class="text-2xl text-blue-500 font-bold">Happy Birthday</h1>
+        <h1 class="text-4xl text-pink-500 font-bold animate__animated animate__pulse animate__infinite">MAMI RATU</h1>
+        <button class="p-2 bg-blue-600 text-white rounded mt-5 hover:bg-blue-900 transition ease-in animate__animated animate__delay-1s animate__tada" onclick="ubahKartu()">Klik Disini
+        </button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+      let kartu = document.getElementById("kartu");
+      function ubahKartu(){
+        kartu.innerHTML = ` <h1 class="font-semibold text-wrap animate__animated animate__zoomIn">
+    Selamat Ulang Tahun MAMI RATU... 🥳🥳🥳
+    Semoga selalu diberi umur panjang, selalu diberi kesehatan, dilancarkan rejekinya. 🎉🎉
+    Semoga selalu diberi kebahagiaan & semoga selalu dikelilingi dengan orang-orang yang baik. 🤲🏻
+    Terakhir mii... jangan marah-marah mulu yee ... ✌🏻️🤣</h1>
+    <h3 class="mt-3 animate__animated animate__fadeIn">
+        - Dari : MT | Bayy -
+    </h3>
+    <button 
+        class="p-2 bg-blue-600 text-white rounded mt-6 hover:bg-blue-900 transition ease-in animate__animated animate__delay-1s animate__tada" onclick="refresh()"
+        >
+        Tutup
+    </button>
+    `;
+      }
+        function refresh(){
+        location.reload();
+      }
+    </script>
+    
+    </body>
+ </html>
